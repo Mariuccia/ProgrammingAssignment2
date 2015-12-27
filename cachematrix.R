@@ -8,7 +8,7 @@
 ##the R language will be used and shown how they can be manipulated to 
 ##preserve state inside of an R object."
 
-## Create a cacheMatrix object for an invertale matrix.
+## Create a cacheMatrix object for the inverse matrix function.
 
 makeCacheMatrix <- function(x = matrix()) {
         inverse <- NULL
@@ -25,10 +25,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Return the inverse of an cacheMatrix object
+## Function to return the inverse of an object created with the above function. 
 
 cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+        ## Return a matrix that is the inverse of x
         invFunc <- x$getInverse()
         if(!is.null(invFunc)) {
                 message("getting cached data")
